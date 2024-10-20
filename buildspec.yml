@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 14 # Specify Node.js version if using Node.js for builds
+    commands:
+      - echo "Installing dependencies..." # Add commands to install any dependencies if needed
+  pre_build:
+    commands:
+      - echo "Preparing for build..."
+  build:
+    commands:
+      - echo "Building the project..."
+      # If you're using a static site generator or build tool, run it here
+  post_build:
+    commands:
+      - echo "Build completed."
+artifacts:
+  files:
+    - '**/*' # Adjust this if you only want to include specific files
+  base-directory: ./ # Specify the base directory if needed
+
+cache:
+  paths:
+    - node_modules/**/* # Cache node_modules if using Node.js dependencies
