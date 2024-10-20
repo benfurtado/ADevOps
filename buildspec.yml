@@ -19,6 +19,7 @@ phases:
 artifacts:
   files:
     - '**/*' # Adjust this if you only want to include specific files
+    - Ben_portfolio.html  # Adjust this to match your actual file path in the build stage
   base-directory: ./ # Specify the base directory if needed
 
 cache:
